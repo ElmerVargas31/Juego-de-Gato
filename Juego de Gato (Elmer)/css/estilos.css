@@ -1,0 +1,107 @@
+/*-----TIPOGRAFÍA-----*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
+
+/*-----ESTILOS GENERALES-----*/
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px;
+    background-image: url(../img/fondo.jpg); background-size: 100% 100%; 
+    background-repeat: no-repeat; user-select: none;
+}
+header, footer, h1, h2, .jugador, input[type="button"]{
+    background-color: rgb(17, 17, 17); color: rgb(184, 31, 31);
+}
+h1, h2, h3, input[type="button"]{
+    text-align: center; font-family: 'Cormorant Garamond', serif;
+}
+
+/*-----ESTRUCTURAS - TÍTULOS-----*/
+#wrapper{
+    width: 70%; height: 100%;
+    margin: 10px auto; background-color: rgba(0,0,0,0.8);
+}
+header, footer{
+    height: 75px; padding: 1px 0;
+}
+header{height: 90px;}
+h1{font-size: 36px;}
+h2{font-size: 26px;}
+.contenido{display: flex;}
+aside, main{height: 600px;}
+aside{
+    width: 30%; background-color: rgb(204, 204, 204);
+}
+main{
+    background-color: rgb(31, 24, 14);
+    width: 70%; position: relative;
+}
+
+/*-----FORMULARIO PUNTOS (ASIDE)-----*/
+aside h3{
+    font-size: 24px; font-weight: bolder;
+}
+#puntuacion, #img_juego{height: 250px;}
+#puntuacion{
+    background-color: rgb(34, 30, 27); padding-top: 8px; height: 200px;
+}
+.jugador{
+    width: 85%; height: 40px;
+    border-bottom: 1px solid rgb(184, 31, 31);
+    display: flex; margin: 5px 0;
+    font-weight: bolder; padding-left: 21%;
+}
+.punt_turnos, .puntos{width: 32%;}
+.puntos{
+    height: 22px; margin-top: 8px;
+    color: rgb(51, 39, 29); font-weight: bolder;
+    background-color: rgb(238, 237, 197);
+    font-size: 15px; text-align: center; border: none;
+}
+#botones{
+    padding-left: 50px; margin-top: 15px;
+}
+input[type="button"]{
+    width: 80px; height: 35px;
+    border-radius: 10px; border: none;
+    outline: none; cursor: pointer;
+    font-size: 16px; margin-top: 10px; 
+    margin-right: -29px; margin-left: 47px;
+}
+#img_juego img{
+    width: 75%; height: 240px; border-radius: 25px;
+    margin-left: 12%; margin-top: 12%; opacity: 0.8;
+    box-shadow: 3px 3px 8px 5px #464646cc;
+}
+
+/*Efecto a los botones*/
+input[type="button"]:active{
+    background-color: rgb(17, 17, 17,.3)
+}
+
+/*-----ÁREA DE JUEGO (MAIN)-----*/
+
+/*Posición de los recuadros*/
+#cuadro1, #cuadro2, #cuadro3, #cuadro4, #cuadro5, #cuadro6, #cuadro7, #cuadro8, #cuadro9{
+    position: absolute; width: 105px; height: 105px;
+    background-color: rgba(41, 37, 37, 0.6); padding: 15px;
+} 
+#cuadro1, #cuadro2, #cuadro3{top: 60px;}
+#cuadro1, #cuadro4, #cuadro7{left: 70px;}
+#cuadro2, #cuadro5, #cuadro8{left: 260px;}
+#cuadro3, #cuadro6, #cuadro9{right: 70px;}
+#cuadro4, #cuadro5, #cuadro6{top: 230px;}
+#cuadro7, #cuadro8, #cuadro9{top: 400px;}
+
+/*Posición de las líneas*/
+.linea1, .linea2, .linea3, .linea4{
+    position: absolute;  background-color: rgb(226, 226, 226);
+}
+.linea1, .linea2{
+    height: 520px; width: 5px; 
+    top: 35px; left: 230px;
+}
+.linea2{left: 419px;}
+.linea3, .linea4{
+    height: 5px; width: 535px; 
+    top: 210px; left: 57px;
+}
+.linea4{top: 380px;}
