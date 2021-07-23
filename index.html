@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Metas-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Elmer Vargas Salazar">
+    <meta name="description" content="Este sitio es referente al juego de mesa clásico de gato" lang="es">
+    <meta name="keywords" content="Juego, Gato, Puntuación" lang="es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Título de Pestaña-->
+    <title>Juego del Gato</title>
+    <!--Icono de Pestaña-->
+    <link rel="shortcut icon" href="img/juego.jpg" type="image/x-icon">
+    <!--Hoja de Estilo CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--Enlace Javascript-->
+    <script src="js/juego_gato.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Juego del Gato</h1>
+        </header>
+        <!--CONTENEDOR DE TODO EL JUEGO-->
+        <div class="contenido">
+            <!--PUNTOS DEL JUEGO-->
+            <aside>
+                <h3>Puntuación</h3>
+                <form id="puntuacion" name="puntuacion">
+                    <div class="jugador">
+                        <p class="punt_turnos">X</p>
+                        <input type="text" name="puntoX" class="puntos" disabled>
+                    </div>
+                    <div class="jugador">
+                        <p class="punt_turnos">O</p>
+                        <input type="text" name="puntoO" class="puntos" disabled>
+                    </div>
+                    <div class="jugador">
+                        <p class="punt_turnos">Turno</p>
+                        <input type="text" name="turno" class="puntos" disabled>
+                    </div>
+                    <div class="botones">
+                        <input type="button" value="Reiniciar" onclick="funRefrescar()">
+                        <input type="button" value="Siguiente" onclick="funSiguiente()">
+                    </div>
+                </form>
+                <div id="img_juego">
+                    <img src="img/juego.jpg" alt="Juego del Gato">
+                </div>
+            </aside>
+
+            <!--ÁREA DEL JUEGO DE GATO-->
+            <main>
+                <!--Recuadros del Tablero-->
+                <div id="cuadro1" onclick="funCuadro1()"></div>
+                <div id="cuadro2" onclick="funCuadro2()"></div>
+                <div id="cuadro3" onclick="funCuadro3()"></div>
+                <div id="cuadro4" onclick="funCuadro4()"></div>
+                <div id="cuadro5" onclick="funCuadro5()"></div>
+                <div id="cuadro6" onclick="funCuadro6()"></div>
+                <div id="cuadro7" onclick="funCuadro7()"></div>
+                <div id="cuadro8" onclick="funCuadro8()"></div>
+                <div id="cuadro9" onclick="funCuadro9()"></div>
+                <!--Líneas del Tablero-->
+                <div class="linea1"></div>
+                <div class="linea2"></div>
+                <div class="linea3"></div>
+                <div class="linea4"></div>
+            </main>
+        </div><!--Fin Contenedor del Juego-->
+        <footer>
+            <h2>Programación en Javascript</h2>
+        </footer>
+    </div><!--Fin de Wrapper-->
+</body>
+<script>
+    funRefrescar()
+</script>
+</html>
